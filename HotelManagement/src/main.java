@@ -1,15 +1,21 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-public class main {
+public class main extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Hello JavaFX");
+        Label label = new Label("Hello, JavaFX!");
+        StackPane root = new StackPane();
+        root.getChildren().add(label);
+        primaryStage.setScene(new Scene(root, 300, 200));
+        primaryStage.show();
+    }
 
-	public main() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hello world");
-		System.out.println("hello yazan");
-		//fnoewffnweoef
-	}
-
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
